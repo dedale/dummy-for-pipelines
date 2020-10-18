@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using NUnit.Framework.Internal;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 namespace Highway.UnitTests
@@ -25,7 +26,7 @@ namespace Highway.UnitTests
     [TestFixture]
     public class Sandbox
     {
-        [Test, Explicit] public void Test()
+        [Test, Explicit, ExcludeFromCodeCoverage] public void Test()
         {
             var fixtures = 1000;
             var xMin = 0.0;
