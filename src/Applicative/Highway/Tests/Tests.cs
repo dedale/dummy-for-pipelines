@@ -3,6 +3,7 @@ using NUnit.Framework.Internal;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Threading;
 
 namespace Highway.UnitTests
 {
@@ -19,7 +20,8 @@ namespace Highway.UnitTests
         [Test] public void Test()
         {
             Assert.AreEqual("Highway.Code", typeof(Code).FullName);
-            Console.WriteLine($"Would wait {duration} s");
+            Console.WriteLine($"Waiting {duration} s");
+            Thread.Sleep(TimeSpan.FromSeconds(duration));
         }
     }
 

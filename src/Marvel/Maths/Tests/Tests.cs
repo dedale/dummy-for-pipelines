@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Linq;
+using System.Threading;
 
 namespace Marvel.Maths.UnitTests
 {
@@ -17,7 +18,8 @@ namespace Marvel.Maths.UnitTests
         [Test] public void Test()
         {
             Assert.AreEqual("Marvel.Maths.Code", typeof(Code).FullName);
-            Console.WriteLine($"Would wait {duration} s");
+            Console.WriteLine($"Waiting {duration} s");
+            Thread.Sleep(TimeSpan.FromSeconds(duration));
         }
     }
 }
